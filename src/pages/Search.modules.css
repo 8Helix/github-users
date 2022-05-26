@@ -1,0 +1,41 @@
+.search {
+  padding: 40px 0 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search input {
+  height: 40px;
+  width: 280px;
+  border: 3px solid var(--green-6);
+  padding: 0px 10px;
+  outline: none;
+}
+
+.search input:active {
+  outline: none;
+}
+
+.searchedCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconDiv {
+  height: 40px;
+  width: 30px;
+  background-color: var(--green-6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  color: white;
+}
+
+.icon:hover {
+  cursor: pointer;
+}

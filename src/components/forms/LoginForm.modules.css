@@ -1,0 +1,32 @@
+.form-0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-0 label,
+input {
+  display: block;
+}
+
+.form-0 input {
+  outline: none;
+  width: 240px;
+  height: 30px;
+}
+
+.form-0 label {
+  margin: 10px;
+}
+
+.login-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-button button {
+  width: 120px;
+}
