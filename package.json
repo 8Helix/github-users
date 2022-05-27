@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "parcel public/index.html",
-    "build": "parcel build public/index.html",
+    "build": "parcel build public/index.html && cp public/_redirects dist",
     "lint": "eslint \"src/**/*.js\" ",
     "lint:fix": "eslint --fix \"src/**/*.js\" "
   },
