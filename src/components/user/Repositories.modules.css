@@ -1,0 +1,26 @@
+.repositories {
+  margin-top: 20px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.repoNames {
+  border: 3px solid #fdf2e9;
+  margin-top: 5px;
+  background-color: var(--green);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  color: #e3e8ff;
+  text-decoration: none;
+}
+
+.repoNames:hover {
+  color: var(--black);
+}
+
+.anchor:link,
+.anchor:visited {
+  text-decoration: none;
+}

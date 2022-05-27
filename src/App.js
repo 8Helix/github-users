@@ -1,5 +1,5 @@
 import { useContext } from 'react/';
-import Header from './components/Header.js';
+import Header from './components/header/Header.js';
 import { AuthContext } from './context/AuthContext.js';
 import { FollowContextProvider } from './context/FollowContext';
 import Routes from './Routes.js';

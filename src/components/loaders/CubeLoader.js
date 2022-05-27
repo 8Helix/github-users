@@ -2,7 +2,7 @@ import './CubeLoader.modules.css';
 
 function CubeLoader() {
   return (
-    <div className="sk-cube-grid">
+    <div className="sk-cube-grid" style={{ height: '100px' }}>
       <div className="sk-cube sk-cube1"></div>
       <div className="sk-cube sk-cube2"></div>
       <div className="sk-cube sk-cube3"></div>

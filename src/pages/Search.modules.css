@@ -8,9 +8,10 @@
 .search input {
   height: 40px;
   width: 280px;
-  border: 3px solid var(--green-6);
+  border: 3px solid var(--grey);
   padding: 0px 10px;
   outline: none;
+  box-shadow: 0 0 10px var(--green);
 }
 
 .search input:active {
@@ -26,10 +27,11 @@
 .iconDiv {
   height: 40px;
   width: 30px;
-  background-color: var(--green-6);
+  background-color: var(--grey);
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 10px var(--green);
 }
 
 .icon {

@@ -1,4 +1,5 @@
 import RegisterForm from '../components/forms/RegisterForm';
+import './Register.modules.css';
 
 function Register() {
   return (

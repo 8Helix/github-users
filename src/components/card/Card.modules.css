@@ -1,0 +1,24 @@
+.card {
+  width: 250px;
+  margin: 15px;
+  border-radius: 10px;
+  background-color: #e3e8ff;
+}
+
+.cardBody {
+  min-height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cardImg img {
+  width: 100%;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.cardBody h2 {
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+}

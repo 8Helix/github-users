@@ -1,9 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
-import { ROUTES } from '../config/routes.js';
-import { AuthContext } from '../context/AuthContext.js';
-import { FollowContext } from '../context/FollowContext.js';
-import github from '../../img/github.png';
+import { ROUTES } from '../../config/routes.js';
+import { AuthContext } from '../../context/AuthContext.js';
+import { FollowContext } from '../../context/FollowContext.js';
+import github from '../../../img/github.png';
+import './Header.modules.css';
 
 function Header() {
   const { logout } = useContext(AuthContext);

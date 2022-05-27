@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../../config/routes';
 import CardBody from './CardBody';
+import './Card.modules.css';
 
 function Card({ user }) {
   return (

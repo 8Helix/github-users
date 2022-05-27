@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import LoginForm from '../components/forms/LoginForm';
+import './Login.modules.css';
 
 function Login() {
   const { state } = useLocation();

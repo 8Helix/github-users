@@ -3,7 +3,6 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 0px;
 }
 
 .user-name {
@@ -14,7 +13,8 @@
 }
 
 .user-img img {
-  padding: 20px;
+  padding: 30px;
   width: 100%;
+
   border-radius: 50%;
 }

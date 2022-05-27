@@ -46,7 +46,7 @@ function Dashboard() {
                 <Card key={v4()} user={user} />
               ))}
             </div>
-            <div className="button">
+            <div className="button green">
               <button
                 className="loadButton"
                 onClick={() => setPage((prev) => prev + 1)}

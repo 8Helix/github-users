@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getUserData } from '../../http/get';
 import Organization from './Organization';
+import './Organizations.modules.css';
 
 function Organizations({ user }) {
   const [organizations, setOrganizations] = useState([]);

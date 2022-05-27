@@ -3,23 +3,28 @@ import { useEffect, useState } from 'react';
 import { getUserData } from '../http/get';
 import UserInfo from '../components/user/UserInfo';
 import Repositories from '../components/user/Repositories';
-import '../components/user/UserInfo.modules.css';
+import './User.modules.css';
 
 function User() {
   const [user, setUser] = useState({});
+  const [error, setError] = useState('');
 
   const { name } = useParams();
 
   useEffect(() => {
     setUser({ loading: true });
-    getUserData(`https://api.github.com/users/${name}`).then((data) => {
-      setUser({ ...data.data, loading: false });
-    });
+    getUserData(`https://api.github.com/users/${name}`)
+      .then((data) => {
+        setUser({ ...data.data, loading: false });
+      })
+      .catch((err) => setError(err.message));
   }, []);
 
   return (
-    <main>
-      {Object.keys(user).length > 0 ? (
+    <main className="center">
+      {error ? (
+        <h2 style={{ color: 'white' }}>{error}</h2>
+      ) : Object.keys(user).length > 0 ? (
         <div className="user-container">
           <div className="center">
             <div className="user-info">
