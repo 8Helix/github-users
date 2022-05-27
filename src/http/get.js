@@ -13,7 +13,7 @@ async function getUsers(page) {
     return data;
   }
 
-  throw new Error("Help me I'm so Errored");
+  throw new Error("Couldn't fetch Users");
 }
 
 async function getFollowers(url) {

@@ -22,7 +22,6 @@ async function signInUser(username, password) {
       },
     }
   );
-
   return response.data;
 }
 

@@ -29,30 +29,33 @@ function Dashboard() {
         });
       })
       .catch((err) => {
-        console.log(err.message);
-        setError("Couldn't fetch users");
+        console.log(err.messages);
+        setError(err.messages);
       });
   }, [page]);
 
   return (
     <main className="container">
-      {error && <h2>{error}</h2>}
-      {Boolean(users.length) && (
-        <>
-          <div className="dashboard">
-            {users.map((user) => (
-              <Card key={v4()} user={user} />
-            ))}
-          </div>
-          <div className="button">
-            <button
-              className="loadButton"
-              onClick={() => setPage((prev) => prev + 1)}
-            >
-              load more
-            </button>
-          </div>
-        </>
+      {error ? (
+        <h2 style={{ color: 'white' }}>{error}</h2>
+      ) : (
+        Boolean(users.length) && (
+          <>
+            <div className="dashboard">
+              {users.map((user) => (
+                <Card key={v4()} user={user} />
+              ))}
+            </div>
+            <div className="button">
+              <button
+                className="loadButton"
+                onClick={() => setPage((prev) => prev + 1)}
+              >
+                load more
+              </button>
+            </div>
+          </>
+        )
       )}
     </main>
   );

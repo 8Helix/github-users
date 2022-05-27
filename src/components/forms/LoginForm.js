@@ -9,21 +9,28 @@ function LoginForm() {
   const [password, setPassword] = useState('');
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
+  const [validation, setValidation] = useState('');
+
+  let usernameRed = '';
+  if (validation) {
+    usernameRed = 'red';
+  }
 
   async function handleSubmit(e) {
     e.preventDefault();
     try {
       await login(username, password);
     } catch (error) {
-      // Show errors on the UI
-      console.log(error);
+      if (error.response.statusText === 'Unauthorized') {
+        setValidation('Invalid Username or Password');
+      }
     }
   }
 
   return (
     <form>
       <div className="form-0">
-        <label htmlFor="username">
+        <label className={usernameRed} htmlFor="username">
           Username
           <input
             id="username"
@@ -33,7 +40,6 @@ function LoginForm() {
             onChange={(e) => setUsername(e.target.value)}
           />
         </label>
-        <br />
         <label htmlFor="password">
           Password
           <input
@@ -44,6 +50,13 @@ function LoginForm() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
+      </div>
+      <div className="center">
+        {validation && (
+          <p className="error" style={{ marginLeft: '-10px' }}>
+            {validation}
+          </p>
+        )}
       </div>
       <div className="button login-button">
         <button onClick={handleSubmit}>Login</button>
