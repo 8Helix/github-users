@@ -21,7 +21,6 @@ function LoginForm() {
     try {
       await login(username, password);
     } catch (error) {
-      console.log(error);
       if (error.response.statusText === 'Unauthorized') {
         setValidation('Invalid Username or Password');
       }

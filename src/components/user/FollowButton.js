@@ -6,12 +6,14 @@ function FollowButton({ user }) {
   const { favorites, setFavorites } = useContext(FollowContext);
 
   useEffect(() => {
-    if (!favorites.find((item) => item.username === user.login)) {
-      setButton('Follow');
-    } else {
-      setButton('Following');
+    if (Object.keys(user).length > 1) {
+      if (favorites.find((item) => item.username === user.login)) {
+        setButton('Following');
+      } else {
+        setButton('Follow');
+      }
     }
-  }, []);
+  }, [user]);
 
   function handleFollow() {
     if (button === 'Follow') {
